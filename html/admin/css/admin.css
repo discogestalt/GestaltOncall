@@ -1,0 +1,72 @@
+th {
+  font-size: 9pt;
+  text-align: left;
+  padding: 2 10 2 5;
+}
+
+td {
+  font-size: 8pt;
+  padding: 2 10 2 5;
+  margin-top: 5;
+}
+
+p {
+	font-size: 10pt;
+}
+
+#ac_head {
+  width: 95%;
+  margin: 30px auto 8px auto;
+  text-shadow: 1px 1px 4px #333;
+}
+
+#ac_box {
+  width: 95%;
+  margin: auto;
+}
+
+#ac_box li {
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+#edit_config {
+  margin-top: 15px;
+}
+
+#add_group {
+  font-size: 10pt;
+}
+
+#add_group span {
+  width: 50;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#add_group div {
+  margin: 10 0;
+}
+
+#add_group_button, #edit_groups_button, #add_user_button, #edit_users_button {
+  margin: 15px 0 10px 10px;
+  font-size: 8px;
+}
+
+#ecf_label {
+  font-size: 10pt;
+  margin: 15px 0px 10px 5px;
+}
+
+#init_cal_form  div {
+  font-size: 10pt;
+	margin: 15px 0px;
+}
+
+.grouplist {
+  margin: auto;
+}
+
+.ui-button-text {
+  font-size: 8pt;
+}

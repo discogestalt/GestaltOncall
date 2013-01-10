@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>On-Call Calendar</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="/css/common.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="/css/oncall-theme/jquery-ui-1.9.0.custom.css" type="text/css" media="screen" charset="utf-8" />
+	</head>
+
+	<body>
+		<script src="/js/jquery.js" type="text/javascript"></script>
+		<script src="/js/jquery-ui-1.9.0.custom.js" type="text/javascript"></script>
+		<script src="/js/date.js" type="text/javascript"></script>
+		<script src="/js/calmaster.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var config = {}
+			$.getJSON('/php/js_config.php', function(data) {
+				config = data
+			})
+			if(config.embedded==1) {
+				var calHost=config.cal_server
+			} else {
+				var calHost=window.location.host
+			}
+		</script>
+		<script type="text/javascript">
+			var ocjq = jQuery.noConflict(true);
+			ocjq.support.cors = true
+			ocjq(document).ready(function() {
+				oncallCal = new leanOncallCal("oncallCal")
+				oncallCal.buildCal()
+				oncallCal.display()
+				oncallCal.buildLegend()
+			} );
+		</script>
+
+    <div id="cal_container">
+      <div id="edit_day"></div>
+      <div id="calendar_box" class="ui-state-active ui-corner-all">
+	<div id="cal_head" class="ui-widget-header ui-helper-clearfix ui-corner-all">
+	  <a id="prev" title="Prev" class="ui-state-default ui-corner-all" onclick="oncallCal.goToPrev()"><span class="ui-icon ui-icon-circle-triangle-w"></span></a>
+	  <a id="next" title="Next" class="ui-state-default ui-corner-all" onclick="oncallCal.goToNext()"><span class="ui-icon ui-icon-circle-triangle-e"></span></a>
+	  <div id="month_name" class="ui-datepicker-title"></div>
+	</div> <!-- end div cal_head -->
+	<div id="days" class="ui-state-default">
+	  <div id="sun" class="dayname">Sunday</div>
+	  <div id="mon" class="dayname">Monday</div>
+	  <div id="tue" class="dayname">Tuesday</div>
+	  <div id="wed" class="dayname">Wednesday</div>
+	  <div id="thu" class="dayname">Thursday</div>
+	  <div id="fri" class="dayname">Friday</div>
+	  <div id="sat" class="dayname">Saturday</div>
+	  <div class="clear"></div>
+	</div> <!-- end div days -->
+	<div id="calendar_grid"></div>
+	<div id="cal_footer" class="ui-corner-bottom"></div>
+      </div> <!-- end div calendar_box -->
+      <div id="legend"></div>
+      <div id="edit_group"></div>
+      <div id="edit_gmem"></div>
+    </div> <!-- end div container -->
+
+  </body>
+
+</html>

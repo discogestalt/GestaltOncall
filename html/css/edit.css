@@ -1,0 +1,207 @@
+#message {
+  margin: 25px 0px 0px 25px;
+  color: red;
+}
+
+#message h2 {
+  font-size: 14pt;
+}
+
+#notes {
+  width: 250px;
+  margin-top: 35px;
+  padding: 0px;
+  border: 1px solid #ddd;
+  float: left;
+}
+
+#notes_head {
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#notes_head h4 {
+  margin: 0px;
+  font-size: 12px;
+}
+
+#notes_body {
+  margin: 0px 5px 5px 5px;
+}
+
+#notes_body p {
+  font-size: 10px;
+}
+
+.note {
+  margin: 0px 2px 0px 2px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ddd;
+}
+
+#head td {
+  border-bottom: none;
+}
+
+#submit {
+  background-color: #ddd;
+}
+
+#submit td {
+  border-bottom: 1px solid #ccc;
+}
+
+#submit p {
+  margin: 0px;
+  font-size: 10pt;
+}
+
+#submit img {
+  vertical-align: middle;
+}
+
+#submit a:link {
+  color: #777;
+  text-decoration: none;
+}
+
+#submit a:visited {
+  color: #777;
+  text-decoration: none;
+}
+
+#submit a:hover {
+  color: #777;
+  text-decoration: none;
+}
+
+#submit a:active {
+  color: #777;
+  text-decoration: none;
+}
+
+#edit_container {
+ margin: 35px 10px;
+ border: 1px solid #bbb;
+ display: block;
+ position: relative;
+ width: 845px;
+}
+
+#edit_group_head {
+  background-color: #eee;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#victims_head {
+  background-color: #eee;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#edit_group_head h2, #victims_head h2 {
+  margin: 0px;
+  font-size: 14pt;
+}
+
+#edit_group_info {
+  margin: 0px 0px 10px 15px;
+}
+
+#edit_group_info p {
+  margin: 0px;
+  font-size: 12pt;
+}
+
+.edit_label {
+  float: left;
+  margin: 10px 5px 10px 5px;
+}
+
+.edit_input {
+  float: left;
+  margin: 10px 5px 10px 5px;
+}
+
+#autorotate_label {
+  margin-left: 20px;
+}
+
+#autorotate_input label {
+  margin-right: 5px;
+  font-size: 10pt;
+}
+
+#alias_input label {
+  margin-right: 5px;
+  font-size: 10pt;
+}
+
+#backup_input label {
+  margin-right: 5px;
+  font-size: 10pt;
+}
+
+#failsafe_input label {
+  margin-right: 5px;
+  font-size: 10pt;
+}
+
+#victims_table {
+  margin: 15px 0px 0px 15px;
+}
+
+#victims_table th {
+  font-size: 10pt;
+  text-align: left;
+  padding: 5px;
+}
+
+#victims_table td {
+  padding: 8px;
+}
+
+#victims_table input {
+  padding: 0px;
+  margin: 3px;
+}
+
+#victims_table label {
+  margin-right: 10px;
+  font-size: 10pt;
+}
+
+#back_link {
+  vertical-align: middle;
+  font-size: 10pt;
+}
+
+#back_link img {
+  vertical-align: middle;
+}
+
+#back_link a:link {
+  color: #777;
+  text-decoration: none;
+}
+
+#back_link a:visited {
+  color: #777;
+  text-decoration: none;
+}
+
+#back_link a:hover {
+  color: #777;
+  text-decoration: none;
+}
+
+#back_link a:active {
+  color: #777;
+  text-decoration: none;
+}

@@ -1,0 +1,235 @@
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+img {
+  border: 0px;
+}
+
+#container {
+  margin: 20px 10px;
+}
+
+#calendar_box {
+  width: 75%;
+  border: 1px solid #444;
+  float: left;
+  margin-bottom: 50px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+#cal_head {
+  position: relative;
+  width: 95%;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: auto;
+  padding: 2px;
+}
+
+#prev, #next {
+  display: block;
+  float: left;
+  height: 16px;
+  width: 24px;
+  padding: 4px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#prev span, #next span {
+  margin: 0 4px;
+}
+
+#prev {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+#next {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#month_name {
+  text-align: center;
+  width: 100%;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+#month_name h3 {
+  padding: 0;
+  margin: 0;
+}
+
+#calendar_grid {
+  width: 100%;
+}
+
+#cal_footer {
+  margin: 0;
+  height: 20px;
+  background-color: #444;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+}
+
+#legend {
+  width: 22%;
+  float: left;
+  margin: 0 0 0 2%;
+  padding: 0;
+  font-size: 10pt;
+  overflow: hidden;
+}
+
+#legend h4 {
+  font-size: 11pt;
+}
+
+#legend dl {
+  margin: 10px 0 10px 5px;
+}
+
+#legend dt {
+  font-weight: bold;
+}
+
+#legend dd {
+  margin-bottom: 3px;
+}
+
+#legend label {
+  margin-left: 5px;
+}
+
+#editMonthButtons {
+  float: right;
+  font-size: 10pt;
+  font-weight: normal;
+  margin: 0 10px 5px 0;
+}
+
+#eg_backup input, #eg_failsafe input {
+  margin-left: 15px;
+}
+ 
+#ar2, #bu2, #fs2 {
+  margin-left: 10px;
+}
+
+#edit_gmem_header {
+  font-size: 10pt;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+#edit_gmem_header span {
+  margin: 0 2px 0 5px;
+}
+
+.calweek {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dayname {
+  float: left;
+  text-align: center;
+  width: 13%;
+  margin: .5%;
+  padding: 2px 0;
+}
+
+.day {
+  float: left;
+  width: 13%;
+  height: 220px;
+  margin: .5%;
+  border-right: 1px solid #ccc;
+  background-color: white;
+  overflow: auto;
+}
+
+.day h4 {
+  margin: 8px 0 5px 5px;
+  font-size: 11pt;
+}
+
+.day p {
+  margin: 0 0 2px 10px;
+  font-size: 10pt;
+}
+
+.today {
+  background-color: #ddf;
+}
+
+.sunday {
+  background-color: transparent;
+}
+
+.saturday {
+  background-color: transparent;
+  border-right: 0;
+}
+
+.grey {
+  background-color: #ddd;
+}
+
+.groupinfo {
+  padding: 0;
+  margin: 0;
+}
+
+.ghide {
+  margin: 15px 0 0 15px;
+}
+
+.ohide {
+  margin: 2px 0 0 15px;
+}
+
+.editmonthbutton {
+  float: left;
+  margin: 10px 15px 0 10px;
+}
+
+.eg_divs {
+  margin: 10px 10px;
+  padding: 5px 5px;
+}
+
+.edit_group_item {
+  font-size: 11pt;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.edit_gmem_input {
+  margin-left: 5px;
+}
+
+.clear {
+  clear: both;
+}

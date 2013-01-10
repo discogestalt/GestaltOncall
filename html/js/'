@@ -1,0 +1,87 @@
+groupColors=new Array("","blue", "purple", "red", "green", "goldenrod", "teal", "darkorchid", "orangered", "olivedrab", "orange")
+monthStrings=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+weekDays=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+
+function buildCal(month,year) {
+  var now=new Date()
+  if(typeof month=="undefined") {
+    var curMonth=now.getMonth()
+  } else {
+    var curMonth=month
+  }
+  if(typeof year=="undefined") {
+    var curYear=now.getFullYear()
+  } else {
+    var curYear=year
+  }
+  realMonth=sanitize(curMonth+1)
+  
+  var preVictims
+  var postVictims
+  var victims=getVictims(curYear,realMonth)
+
+  var dayCount=Date.getDaysInMonth(curYear,curMonth)
+  var firstDay=new Date(curYear,curMonth,15).moveToFirstDayOfMonth()
+  var firstDayNum=firstDay.getDay()
+  var lastDay=new Date(curYear,curMonth,15).moveToLastDayOfMonth()
+  var lastDayNum=lastDay.getDay()
+
+  if(firstDayNum > 0) {
+    var prePad=firstDayNum
+    var transDay=firstDay
+    var td = transDay.addDays(-firstDayNum).getDate()
+    var tm = transDay.getMonth()+1
+    var ty = transDay.getFullYear()
+    preVictims=getVictims(ty,tm,td,"pre");
+  }
+
+  if(lastDayNum < 6) {
+    var postPad = 6 - lastDayNum
+    var transDay=lastDay
+    var td = transDay.addDays(postPad).getDate()
+    var tm = transDay.getMonth()+1
+    var ty = transDay.getFullYear()
+    postVictims=getVictims(ty,tm,td,"post")
+  }
+
+  dumpOutput(curMonth,curYear,dayCount,firstDayNum,lastDayNum,preVictims,victims,postVictims)
+
+}
+
+function dumpOutput(curMonth,curYear,dayCount,firstDayNum,lastDayNum,preVictims,victims,postVictims) {
+  $("#cal_head").html('<h2>'+monthStrings[curMonth]+' '+curYear+'</h2>')
+  var calWeek
+  var wdCount = firstDayNum
+  $.each(preVictims, function(v,victimData) {
+    $("#calendar_grid").append('<h4>'+victimData[v]+'</h4>')
+    $.each(victimData, function(k,data) {
+      $("#calendar_grid").append('<p>'+data[1]+' - '+data[3]+'</p>')
+    });
+  });
+}
+
+function sanitize(digit) {
+  if(digit<=9) {
+    var digit = "0"+digit
+  }
+  return(digit)
+}
+
+function getVictims(y,m,d,p) {
+  var getVictimsURL = "/php/get_victims.php?year="+y+"&month="+m
+  var victimLoad
+  if(typeof p !== "undefined") {
+    if(typeof d !== "undefined") {
+      getVictimsURL = getVictimsURL+"&day="+d+"&p="+p
+    }
+  }
+  $.ajax({
+    url: getVictimsURL,
+    async: false,
+    success: function(data) {
+      victimLoad = data
+    }
+  });
+  return(victimLoad)
+}
+

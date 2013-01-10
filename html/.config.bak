@@ -1,0 +1,9 @@
+[database_config]
+host = "localhost"
+user = "oncall"
+password = "oncall"
+db = "oncall"
+[javascript_config]
+embed = ""
+embed_host = "foo"
+ajax_host = "localhost"
