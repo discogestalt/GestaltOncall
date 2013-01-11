@@ -2,6 +2,7 @@ body,html {
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	height: 100%;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -12,29 +13,56 @@ img {
   border: 0px;
 }
 
-#container {
-  margin: 20px 10px;
+#page_head {
+	width: 100%;
+	height: 57px;
+	background: #eee url(../images/members_header_bg.gif) repeat-x;
+	border-bottom: 1px solid #444;
+	box-shadow: 0 1px 4px;
+}
+
+#title {
+	margin: auto;
+	color: #eee;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	height: 100%;
+}
+
+#title h2 {
+	vertical-align: middle;
+	margin: 0;
+	padding-top: 1%;
+	text-shadow: 10 1px 1px 4px;
+}
+
+#cal_container {
+  width: 95%;
+	height: 100%;
+  margin: 50px auto;
 }
 
 #calendar_box {
   width: 75%;
-  border: 1px solid #444;
+  border: 1px solid #999;
   float: left;
   margin-bottom: 50px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
+	box-shadow: 0 1px 4px;
+	border-radius: 3px;
 }
 
 #cal_head {
   position: relative;
-  width: 95%;
   height: 35px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
   overflow: auto;
-  padding: 2px;
+  padding-top: 2px;
+	padding-bottom: 2px;
+	border: 0px;
+	border-radius: 2px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom: 1px solid #444;
 }
 
 #prev, #next {
@@ -77,6 +105,11 @@ img {
 #month_name h3 {
   padding: 0;
   margin: 0;
+	text-shadow: 10 1px 1px 4px;
+}
+
+#days {
+	background-image: url(box-oncall/images/ui-bg_glass_57_dadaeb_1x400.png);
 }
 
 #calendar_grid {
@@ -86,11 +119,10 @@ img {
 #cal_footer {
   margin: 0;
   height: 20px;
-  background-color: #444;
-  -webkit-border-bottom-left-radius: 10px;
-  -webkit-border-bottom-right-radius: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  -moz-border-radius-bottomright: 10px;
+  background-color: #2576b4;
+	background-size: 1px 20px;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
 }
 
 #legend {
@@ -155,14 +187,14 @@ img {
 .dayname {
   float: left;
   text-align: center;
-  width: 13%;
+  width: 13.35%;
   margin: .5%;
   padding: 2px 0;
 }
 
 .day {
   float: left;
-  width: 13%;
+  width: 13.35%;
   height: 220px;
   margin: .5%;
   border-right: 1px solid #ccc;
